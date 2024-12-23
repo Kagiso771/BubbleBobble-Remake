@@ -4,6 +4,7 @@
 #include <raylib.h>
 #include <string>
 #include "Screen.h"
+#include "shooter.h"
 
 using namespace std;
 
@@ -13,6 +14,7 @@ const int SCREEN_HEIGHT = 800;
 int main () 
 {
     Screen gameScreen(SCREEN_WIDTH,SCREEN_HEIGHT);
+    Shooter greenPlayer({80,670});
 
     cout << "Initializing Raylib" << endl;
 
@@ -23,6 +25,8 @@ int main ()
     {
         BeginDrawing();
         gameScreen.draw();
+        greenPlayer.update();
+        greenPlayer.draw();
         ClearBackground(BLACK);
     
         EndDrawing();
