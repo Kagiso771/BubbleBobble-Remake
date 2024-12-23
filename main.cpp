@@ -1,23 +1,28 @@
 #include <iostream>
+#include <fstream>
+#include <vector>
 #include <raylib.h>
+#include <string>
+#include "Screen.h"
 
 using namespace std;
 
-int main () {
+const int SCREEN_WIDTH = 600;
+const int SCREEN_HEIGHT = 800;
 
-    const int SCREEN_WIDTH = 800;
-    const int SCREEN_HEIGHT = 600;
-    
+int main () 
+{
+    Screen gameScreen(SCREEN_WIDTH,SCREEN_HEIGHT);
 
     cout << "Initializing Raylib" << endl;
 
-    InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Blank screen using raylib");
+    InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Kagiso's Bubble Bobble");
     SetTargetFPS(60);
 
     while (WindowShouldClose() == false)
     {
         BeginDrawing();
-
+        gameScreen.draw();
         ClearBackground(BLACK);
     
         EndDrawing();
