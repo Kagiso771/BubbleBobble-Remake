@@ -25,7 +25,7 @@ int main ()
     {
         BeginDrawing();
         gameScreen.draw();
-        greenPlayer.update();
+        greenPlayer.update(gameScreen.walls);
         greenPlayer.draw();
         ClearBackground(BLACK);
     

@@ -22,13 +22,13 @@ Screen::Screen(int SCREEN_WIDTH, int SCREEN_HEIGHT)
     file.close();
 
     //Developing Screen Structure
-    blockLocations();
+    wallLocations();
 
 }
 
 Screen::~Screen(){}
 
-void Screen::blockLocations()
+void Screen::wallLocations()
 {
     for(auto linePos = 0; linePos < gridLines.size(); linePos++)
     {
@@ -48,6 +48,8 @@ void Screen::draw()
 {
     for(auto i=0; i < wallPositions.size(); i++)
     {
-        DrawRectangleV(wallPositions[i],blockSize, PINK);
+        Rectangle temp = {wallPositions[i].x,wallPositions[i].y,blockSize.x,blockSize.y};
+        walls.push_back(temp);
+        DrawRectangleRec(temp, PINK);
     }
 }

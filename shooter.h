@@ -16,12 +16,15 @@ private:
     Vector2 shooterSize {40, 80};
     enum faceDirection {LEFT, RIGHT};
     faceDirection facing;
+    bool translationalMove;
+    Rectangle playerRect;
 public:
     Shooter(Vector2 startingPos);
     ~Shooter();
     void draw();
-    void update();
+    void update(vector<Rectangle>& walls);
     void jump();
+    void collisionDetector(vector<Rectangle>& walls);
 };
 
 #endif /*SHOOTER*/
