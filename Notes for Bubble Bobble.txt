@@ -1,0 +1,21 @@
+1. Remove all the templates notes
+2. Develop screen characteristics
+3. OOP
+4. Unit testing
+5. Add images
+6. Pull request
+
+
+*Screen*
+Read in from text file
+Read in characters and work from there
+Use a class
+height 800
+width 600
+The math took care of it self, positions x 50 and size of blocks 50 by 50.
+
+*Shooter*
+The physics of jumping, up arrow to jump,
+Jump, move one image size to the direction the shooter is facing, and fall down
+Basically imitating real life motion of objects
+Collisions, dont make anything bounce, make it stationary when colliding with wall
