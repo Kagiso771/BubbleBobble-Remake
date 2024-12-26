@@ -14,11 +14,12 @@ const int SCREEN_HEIGHT = 800;
 int main () 
 {
     Screen gameScreen(SCREEN_WIDTH,SCREEN_HEIGHT);
-    Shooter greenPlayer({80,670});
+    Shooter greenPlayer({80,660});
 
     cout << "Initializing Raylib" << endl;
 
     InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Kagiso's Bubble Bobble");
+    
     SetTargetFPS(60);
 
     while (WindowShouldClose() == false)

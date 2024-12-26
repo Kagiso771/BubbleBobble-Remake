@@ -25,6 +25,7 @@ public:
     void update(vector<Rectangle>& walls);
     void jump();
     void collisionDetector(vector<Rectangle>& walls);
+    void RestrictWithinWalls();
 };
 
 #endif /*SHOOTER*/
