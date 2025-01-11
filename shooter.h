@@ -18,6 +18,8 @@ private:
     faceDirection facing;
     bool translationalMove;
     Rectangle playerRect;
+    Vector2 horizontalWalls {50,550};
+    Vector2 verticalWalls {50, 750};
 public:
     Shooter(Vector2 startingPos);
     ~Shooter();

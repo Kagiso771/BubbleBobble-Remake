@@ -25,7 +25,7 @@ void Shooter::update(vector<Rectangle>& walls)
         playerPos.x +=10;
         facing = RIGHT;
     }
-    else if(IsKeyDown(KEY_LEFT))
+    else if(IsKeyDown(KEY_LEFT) && translationalMove==true)
     {
         playerPos.x -=10;
         facing = LEFT;
@@ -61,20 +61,13 @@ void Shooter::collisionDetector(vector<Rectangle>& walls)
 }
 void Shooter::RestrictWithinWalls()
 {
-  if (playerPos.y <= 170)
+  if (playerPos.x <= horizontalWalls.x)
   {
-    playerPos.y = 170 + 10;
+    playerPos.x = 50;
   }
-  else if (playerPos.y >= 800-55)
+  else if ((playerPos.x+40) >= horizontalWalls.y)
   {
-    playerPos.y = 800-(55+10);
+    playerPos.x = 510;
   }
-  else if (playerPos.x <= 55)
-  {
-    playerPos.x = 50+5;
-  }
-  else if (playerPos.x >= 600-95)
-  {
-    playerPos.x = 600-(95);
-  }
+  
 }
