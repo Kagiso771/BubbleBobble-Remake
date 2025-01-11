@@ -69,5 +69,12 @@ void Shooter::RestrictWithinWalls()
   {
     playerPos.x = 510;
   }
-  
+  else if (playerPos.y <= verticalWalls.x)
+  {
+    playerPos.y = 150;
+  }
+  else if ((playerPos.y+80) >= verticalWalls.y)
+  {
+    playerPos.y = 670;
+  }
 }
