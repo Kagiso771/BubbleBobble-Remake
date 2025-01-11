@@ -14,7 +14,7 @@ const int SCREEN_HEIGHT = 800;
 int main () 
 {
     Screen gameScreen(SCREEN_WIDTH,SCREEN_HEIGHT);
-    Shooter greenPlayer({80,670});
+    Shooter greenPlayer({80,665});
 
     cout << "Initializing Raylib" << endl;
 

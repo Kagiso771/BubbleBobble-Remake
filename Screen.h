@@ -21,11 +21,13 @@ protected:
     void blockCalculator(vector<Vector2>& Positions, char blockRep);
     void wallLocations();
     void mazeBlocks();
+    void walkingPads();
 public:
     Screen(int SCREEN_WIDTH, int SCREEN_HEIGHT);
     ~Screen();
     void draw();
     vector<Rectangle> gridBlocks;
+    vector<Rectangle> walkingPath;
 };
 
 #endif /*SCREEN*/

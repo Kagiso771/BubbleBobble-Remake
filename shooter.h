@@ -20,14 +20,18 @@ private:
     Rectangle playerRect;
     Vector2 horizontalWalls {50,550};
     Vector2 verticalWalls {150, 750};
+    bool jumpFlag;
+protected:
+    void jump();
+    void collisionDetector(vector<Rectangle>& walls);
+    void RestrictWithinWalls();
+    void falling();
 public:
     Shooter(Vector2 startingPos);
     ~Shooter();
     void draw();
     void update(vector<Rectangle>& walls);
-    void jump();
-    void collisionDetector(vector<Rectangle>& walls);
-    void RestrictWithinWalls();
+    
 };
 
 #endif /*SHOOTER*/

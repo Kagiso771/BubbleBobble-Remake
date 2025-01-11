@@ -66,5 +66,19 @@ void Screen::draw()
         gridBlocks.push_back(temp);
         DrawRectangleRec(temp, PINK);
     }
+    walkingPads();
+}
+void Screen::walkingPads()
+{
+    Rectangle groundLevel = {50,745,500,5};
+    walkingPath.push_back(groundLevel);
+    Rectangle firstLevel = {200,545,200,5};
+    walkingPath.push_back(firstLevel);
+    Rectangle secondLevel = {200,345,200,5};
+    walkingPath.push_back(secondLevel);
+    DrawRectangleRec(groundLevel, WHITE);
+    DrawRectangleRec(firstLevel, WHITE);
+    DrawRectangleRec(secondLevel, WHITE);
 
+    
 }

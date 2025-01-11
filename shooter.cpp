@@ -39,6 +39,7 @@ void Shooter::jump()
 {
     if(IsKeyDown(KEY_UP))
     {
+        jumpFlag=true;
         playerPos.y -= 30;
         if(facing==faceDirection::RIGHT)
         {
@@ -49,13 +50,21 @@ void Shooter::jump()
             playerPos.x -=10;
         }
     }
+    else
+    {
+      jumpFlag=false;
+    }
 }
 
 void Shooter::collisionDetector(vector<Rectangle>& walls)
 {
     for(auto wall:walls)
     {
-        
+        if(jumpFlag==true && CheckCollisionRecs(playerRect, wall))
+        {
+          playerPos.y=670;
+          
+        }
     }
     
 }
